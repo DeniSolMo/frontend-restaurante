@@ -1,0 +1,343 @@
+nav, ul, li, a, h3 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;  
+}
+
+/* Header Principal - Barra Lateral */
+.main-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: rgba(26, 26, 64, 0.85);
+  border-right: 1px solid #4a235a;
+  box-shadow: 4px 0 20px rgba(159, 90, 253, 0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;  
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #3a1a60;  
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c59eff;  
+  text-shadow: 0 0 8px #9f5afd, 0 0 12px #9f5afd;  
+}
+
+/* Navegación */
+nav {
+  flex-grow: 1;  
+  overflow-y: auto;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;  
+}
+
+nav > ul > li {
+  position: relative;  
+}
+
+nav > ul > li > a {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #3a1a60;
+  transition: all 0.3s ease;
+}
+
+nav > ul > li > a:hover {
+  background-color: #2a3a8a;  
+  color: #ffffff;
+  padding-left: 2rem;  
+  box-shadow: inset 4px 0 0 #00bfff;  
+}
+
+/* Dropdown Panel */
+.dropdown-panel,
+.mega-menu {
+  display: none;  
+  position: static;  
+  margin-top: 0;  
+  background: rgba(26, 26, 64, 0.95);
+  border: 1px solid #4a235a;
+  border-top: none;  
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 0 8px rgba(159, 90, 253, 0.2);
+  z-index: auto;
+  animation: slideDown 0.25s ease forwards;  
+}
+
+.dropdown:hover > .dropdown-panel,
+.dropdown:hover > .mega-menu {
+  display: block;
+}
+
+/* Mega Menu */
+.mega-menu-column {
+  padding: 0.5rem 0;
+}
+
+.mega-menu-column:not(:last-child) {
+  border-right: 1px solid #3a1a60;  
+}
+
+.mega-menu-column h3 {
+  padding: 1rem 1.5rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c59eff;  
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mega-menu-column ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+  padding: 0.8rem 1.5rem;
+  color: #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.mega-menu-column ul li a:hover {
+  background-color: #2a3a8a;
+  color: #ffffff;
+}
+
+/* Submenu */
+.submenu-trigger {
+  position: relative;  
+}
+
+.submenu {
+  display: none;
+  position: static;  
+  margin-left: 1rem;  
+  border: none;
+  box-shadow: none;
+}
+
+.submenu-trigger:hover > .submenu {
+  display: block;
+}
+
+/* ============================================ */
+/* SECCIÓN DE USUARIO Y LOGOUT */
+/* ============================================ */
+
+.user-section {
+  margin-top: auto;
+  padding: 1rem;
+  border-top: 1px solid #3a1a60;
+  background: rgba(20, 20, 50, 0.7);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(42, 58, 138, 0.3);
+  border-radius: 8px;
+  border: 1px solid #4a235a;
+  margin-bottom: 0.75rem;
+}
+
+.user-icon {
+  font-size: 1.8rem;
+  color: #fbbf24;
+  filter: drop-shadow(0 0 6px #fbbf24);
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.2;
+}
+
+.user-role {
+  font-size: 0.7rem;
+  color: #c59eff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-button:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.5);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+.logout-button svg {
+  font-size: 1.1rem;
+}
+
+/* Animación de slide down */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+/* Scrollbar personalizado para la barra lateral */
+.main-header::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-header::-webkit-scrollbar-track {
+  background: rgba(20, 20, 50, 0.5);
+}
+
+.main-header::-webkit-scrollbar-thumb {
+  background: #4a235a;
+  border-radius: 3px;
+}
+
+.main-header::-webkit-scrollbar-thumb:hover {
+  background: #6a3a8a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .main-header {
+    width: 220px;
+  }
+
+  .logo a {
+    font-size: 1.3rem;
+  }
+
+  nav > ul > li > a {
+    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .user-name {
+    font-size: 0.85rem;
+  }
+
+  .user-role {
+    font-size: 0.65rem;
+  }
+
+  .logout-button {
+    font-size: 0.85rem;
+    padding: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    width: 70px;
+  }
+
+  .logo a {
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  nav > ul > li > a {
+    padding: 1rem 0.5rem;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .user-details {
+    display: none;
+  }
+
+  .user-info {
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .logout-button span {
+    display: none;
+  }
+
+  .logout-button {
+    padding: 0.75rem;
+  }
+
+  .mega-menu-column ul li a {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Ajuste para el contenido principal cuando hay sidebar */
+.main-content {
+  margin-left: 260px;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a40 0%, #2a2a5a 100%);
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 70px;
+    padding: 1rem;
+  }
+}

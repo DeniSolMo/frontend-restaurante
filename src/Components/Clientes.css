@@ -1,0 +1,128 @@
+body {
+  background: linear-gradient(135deg, #0d0d2e 0%, #000000 100%);
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  background: rgba(26, 26, 64, 0.6);
+  border-radius: 12px;
+  border: 1px solid #4a235a;
+  box-shadow: 0 0 25px rgba(159, 90, 253, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.title {
+  text-align: center;
+  color: #c59eff;
+  font-size: 2.5em;
+  font-weight: 600;
+  text-shadow: 0 0 8px #9f5afd, 0 0 12px #9f5afd;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 250, 0.5);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table thead tr {
+  background-color: #4a235a;
+  color: #ffffff;
+  font-size: 1.1em;
+  border-bottom: 2px solid #9f5afd;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #3a1a60;
+  transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #2a3a8a;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: 2px solid;
+  /* --- CORREGIDO --- */
+  /* Tenías un fondo rojo que hacía el botón rojo por defecto */
+  background-color: transparent;
+  color: #e0e0e0; /* Color de texto base (heredado) */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+/* --- AÑADIDO: Botón de Guardar (Amarillo) --- */
+.btn-save {
+  border-color: #ffc107; /* Amarillo */
+  color: #ffc107;
+}
+
+.btn-save:hover {
+  background-color: #ffc107;
+  color: #000; /* Texto negro en hover */
+  box-shadow: 0 0 10px #ffc107;
+}
+
+/* --- AÑADIDO: Botón de Cancelar (Gris/Blanco) --- */
+/* (Generalmente no se pone en amarillo, pero lo dejo a tu gusto) */
+.btn-cancel {
+  border-color: #adb5bd; /* Un gris neutral */
+  color: #adb5bd;
+}
+
+.btn-cancel:hover {
+  background-color: #adb5bd;
+  color: #000;
+  box-shadow: 0 0 10px #adb5bd;
+}
+
+/* --- MODIFICADO: Botón de Editar (Amarillo) --- */
+.btn-edit {
+  border-color: #ffc107; /* Amarillo */
+  color: #ffc107;
+}
+
+.btn-edit:hover {
+  background-color: #ffc107;
+  color: #000;
+  box-shadow: 0 0 10px #ffc107;
+}
+
+/* --- MODIFICADO: Botón de Borrar (Mantenido en Magenta/Rojo por seguridad) --- */
+/* Es mejor que los botones de borrado sean de un color peligroso */
+.btn-delete {
+  border-color: #ff00ff;
+  color: #ff00ff;
+}
+
+.btn-delete:hover {
+  background-color: #ff00ff;
+  color: #000;
+  box-shadow: 0 0 10px #ff00ff;
+} 
